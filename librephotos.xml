@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LibrePhotos</Name>
+  <Repository>reallibrephotos/librephotos:latest</Repository>
+  <Registry>https://hub.docker.com/r/reallibrephotos/librephotos</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/LibrePhotos/librephotos/issues</Support>
+  <Project>https://github.com/LibrePhotos</Project>
+  <Overview>Features&#xD;
+&#xD;
+    Support for all types of photos including raw photos&#xD;
+    Support for videos&#xD;
+    Timeline view&#xD;
+    Scans pictures on the file system&#xD;
+    Multiuser support&#xD;
+    Generate albums based on events like "Thursday in Berlin"&#xD;
+    Face recognition / Face classification&#xD;
+    Reverse geocoding&#xD;
+    Object / Scene detection&#xD;
+    Semantic image search&#xD;
+    Search by metadata&#xD;
+&#xD;
+What does it use?&#xD;
+&#xD;
+    Image Conversion: ImageMagick&#xD;
+    Video Conversion: FFmpeg&#xD;
+    Exif Support: ExifTool&#xD;
+    Face detection: face_recognition&#xD;
+    Face classification/clusterization: scikit-learn and hdbscan&#xD;
+    Image captioning: im2txt,&#xD;
+    Scene classification places365&#xD;
+    Reverse geocoding: Mapbox: You need to have an API key. First 50,000 geocode lookups are free every month.&#xD;
+</Overview>
+  <Category>MediaApp:Photos MediaServer:Photos Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1659896565</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Features&#xD;
+&#xD;
+    Support for all types of photos including raw photos&#xD;
+    Support for videos&#xD;
+    Timeline view&#xD;
+    Scans pictures on the file system&#xD;
+    Multiuser support&#xD;
+    Generate albums based on events like "Thursday in Berlin"&#xD;
+    Face recognition / Face classification&#xD;
+    Reverse geocoding&#xD;
+    Object / Scene detection&#xD;
+    Semantic image search&#xD;
+    Search by metadata&#xD;
+&#xD;
+What does it use?&#xD;
+&#xD;
+    Image Conversion: ImageMagick&#xD;
+    Video Conversion: FFmpeg&#xD;
+    Exif Support: ExifTool&#xD;
+    Face detection: face_recognition&#xD;
+    Face classification/clusterization: scikit-learn and hdbscan&#xD;
+    Image captioning: im2txt,&#xD;
+    Scene classification places365&#xD;
+    Reverse geocoding: Mapbox: You need to have an API key. First 50,000 geocode lookups are free every month.&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+</Container>
