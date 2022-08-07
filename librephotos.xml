@@ -1,14 +1,15 @@
+
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>LibrePhotos</Name>
-  <Repository>reallibrephotos/librephotos:latest</Repository>
-  <Registry>https://hub.docker.com/r/reallibrephotos/librephotos</Registry>
+  <Name>Librephotos</Name>
+  <Repository>reallibrephotos/singleton</Repository>
+  <Registry>https://hub.docker.com/r/reallibrephotos/singleton</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://github.com/LibrePhotos/librephotos/issues</Support>
-  <Project>https://github.com/LibrePhotos</Project>
+  <Project>https://github.com/LibrePhotos/librephotos</Project>
   <Overview>Features&#xD;
 &#xD;
     Support for all types of photos including raw photos&#xD;
@@ -34,14 +35,14 @@ What does it use?&#xD;
     Scene classification places365&#xD;
     Reverse geocoding: Mapbox: You need to have an API key. First 50,000 geocode lookups are free every month.&#xD;
 </Overview>
-  <Category>MediaApp:Photos MediaServer:Photos Status:Beta</Category>
-  <WebUI/>
+  <Category>Cloud: MediaApp:Photos MediaServer:Photos Status:Beta</Category>
+  <WebUI>localhost:3000</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://github.com/LibrePhotos/librephotos/blob/89beca99d57f4987a68af61099ecc46396ffdcda/screenshots/site-logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1659896565</DateInstalled>
+  <DateInstalled>1659901858</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Features&#xD;
@@ -71,9 +72,41 @@ What does it use?&#xD;
 </Description>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish/>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
   </Networking>
-  <Data/>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/librephotos/photos</HostDir>
+      <ContainerDir>/var/lib/librephotos/photos/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/librephotos/thumbnails</HostDir>
+      <ContainerDir>/var/lib/librephotos/data/protected_media/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/librephotos/logs</HostDir>
+      <ContainerDir>/var/log/librephotos/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/librephotos/bd</HostDir>
+      <ContainerDir>/var/lib/postgresql/data/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
   <Environment/>
   <Labels/>
+  <Config Name="Photos" Target="/var/lib/librephotos/photos/" Default="" Mode="rw" Description="Container Path: /var/lib/librephotos/photos/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/librephotos/photos</Config>
+  <Config Name="thumbnails" Target="/var/lib/librephotos/data/protected_media/" Default="" Mode="rw" Description="Container Path: /var/lib/librephotos/data/protected_media/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/librephotos/thumbnails</Config>
+  <Config Name="logs" Target="/var/log/librephotos/" Default="" Mode="rw" Description="Container Path: /var/log/librephotos/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/librephotos/logs</Config>
+  <Config Name="database" Target="/var/lib/postgresql/data/" Default="" Mode="rw" Description="Container Path: /var/lib/postgresql/data/" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/librephotos/bd</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
 </Container>
