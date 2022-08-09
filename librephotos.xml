@@ -1,7 +1,7 @@
 
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Librephotos</Name>
+  <Name>LibrePhotos</Name>
   <Repository>reallibrephotos/singleton</Repository>
   <Registry>https://hub.docker.com/r/reallibrephotos/singleton</Registry>
   <Network>bridge</Network>
