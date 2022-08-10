@@ -37,7 +37,7 @@ What does it use?&#xD;
   <Category>Cloud: MediaApp:Photos MediaServer:Photos Status:Beta</Category>
   <WebUI>localhost:3000</WebUI>
   <TemplateURL/>
-  <Icon>https://github.com/Cobbert/librephotos-unraid/blob/eba0fb7b5a3eba6ce196bb298fb2dc3924c8ffe9/site-logo-dark.png</Icon>
+  <Icon>https://github.com/LibrePhotos/librephotos-frontend/blob/88efbd434f63e8722c085629c57c85f59dce240b/public/logo-inverted.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
