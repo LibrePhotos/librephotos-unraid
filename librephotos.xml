@@ -35,7 +35,7 @@ What does it use?&#xD;
     Reverse geocoding: Mapbox: You need to have an API key. First 50,000 geocode lookups are free every month.&#xD;
 </Overview>
   <Category>Cloud: MediaApp:Photos MediaServer:Photos Status:Beta</Category>
-  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
   <TemplateURL/>
   <Icon>https://github.com/LibrePhotos/librephotos-frontend/blob/88efbd434f63e8722c085629c57c85f59dce240b/public/logo-inverted.png</Icon>
   <ExtraParams/>
